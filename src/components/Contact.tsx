@@ -1,13 +1,20 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaGithub,
+  FaTwitter,
+} from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -15,19 +22,19 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     setTimeout(() => {
       setIsSubmitting(false);
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+
       setTimeout(() => setSubmitStatus(null), 3000);
     }, 2000);
   };
@@ -35,45 +42,45 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: FaMapMarkerAlt,
-      title: "Location",
-      content: "Sec-3, Ballabgarh, Faridabad, Haryana (121004)",
-      color: "text-red-400"
+      title: 'Location',
+      content: 'Sec-3, Ballabgarh, Faridabad, Haryana (121004)',
+      color: 'text-red-400',
     },
     {
       icon: FaEnvelope,
-      title: "Email",
-      content: "nikhil.developer03@gmail.com",
-      link: "mailto:nikhil.developer03@gmail.com",
-      color: "text-blue-400"
+      title: 'Email',
+      content: 'nikhil.developer03@gmail.com',
+      link: 'mailto:nikhil.developer03@gmail.com',
+      color: 'text-blue-400',
     },
     {
       icon: FaPhone,
-      title: "Phone",
-      content: "+91 8375988026",
-      link: "tel:+918375988026",
-      color: "text-green-400"
-    }
+      title: 'Phone',
+      content: '+91 8375988026',
+      link: 'tel:+918375988026',
+      color: 'text-green-400',
+    },
   ];
 
   const socialLinks = [
     {
       icon: FaLinkedin,
-      url: "https://www.linkedin.com/in/nikhil-web-developer/",
-      color: "text-blue-600 hover:text-blue-500",
-      label: "LinkedIn"
+      url: 'https://www.linkedin.com/in/nikhil-web-developer/',
+      color: 'text-blue-600 hover:text-blue-500',
+      label: 'LinkedIn',
     },
     {
       icon: FaGithub,
-      url: "https://github.com/NikhiL-Developer03",
-      color: "text-gray-400 hover:text-white",
-      label: "GitHub"
+      url: 'https://github.com/NikhiL-Developer03',
+      color: 'text-gray-400 hover:text-white',
+      label: 'GitHub',
     },
     {
       icon: FaTwitter,
-      url: "https://www.twitter.com",
-      color: "text-blue-400 hover:text-blue-300",
-      label: "Twitter"
-    }
+      url: 'https://www.twitter.com',
+      color: 'text-blue-400 hover:text-blue-300',
+      label: 'Twitter',
+    },
   ];
 
   return (
@@ -85,10 +92,14 @@ const Contact = () => {
         className="text-center mb-8 sm:mb-10 lg:mb-12"
       >
         <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6">
-          Let's Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400">Together</span>
+          Let's Work{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400">
+            Together
+          </span>
         </h1>
         <p className="text-neutral-400 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
-          Ready to bring your ideas to life? Let's collaborate and create something amazing together.
+          Ready to bring your ideas to life? Let's collaborate and create
+          something amazing together.
         </p>
       </motion.div>
 
@@ -102,22 +113,27 @@ const Contact = () => {
               className="space-y-6 sm:space-y-8"
             >
               <div>
-                <motion.h2 
+                <motion.h2
                   className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Touch</span>
+                  Get In{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                    Touch
+                  </span>
                 </motion.h2>
-                <motion.p 
+                <motion.p
                   className="text-neutral-300 leading-relaxed text-base sm:text-lg"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  I'm always open to discussing new opportunities, creative projects, or potential collaborations. 
-                  Whether you have a project in mind or just want to connect, feel free to reach out!
+                  I'm always open to discussing new opportunities, creative
+                  projects, or potential collaborations. Whether you have a
+                  project in mind or just want to connect, feel free to reach
+                  out!
                 </motion.p>
               </div>
 
@@ -125,8 +141,8 @@ const Contact = () => {
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon;
                   const content = info.link ? (
-                    <a 
-                      href={info.link} 
+                    <a
+                      href={info.link}
                       className="text-neutral-300 hover:text-white transition-colors duration-300"
                     >
                       {info.content}
@@ -144,7 +160,7 @@ const Contact = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 + index * 0.1 }}
                     >
-                      <motion.div 
+                      <motion.div
                         className={`${info.color} text-xl sm:text-2xl mt-1`}
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.2 }}
@@ -152,7 +168,9 @@ const Contact = () => {
                         <IconComponent />
                       </motion.div>
                       <div>
-                        <h3 className="text-white font-semibold text-lg">{info.title}</h3>
+                        <h3 className="text-white font-semibold text-lg">
+                          {info.title}
+                        </h3>
                         <div className="text-sm sm:text-base">{content}</div>
                       </div>
                     </motion.div>
@@ -166,7 +184,10 @@ const Contact = () => {
                 transition={{ delay: 0.7 }}
               >
                 <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6">
-                  Connect With <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Me</span>
+                  Connect With{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                    Me
+                  </span>
                 </h3>
                 <div className="flex space-x-4 sm:space-x-6">
                   {socialLinks.map((social, index) => {
@@ -205,7 +226,10 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                   >
-                    <label htmlFor="name" className="block text-sm font-medium text-neutral-300 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-neutral-300 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -224,7 +248,10 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    <label htmlFor="email" className="block text-sm font-medium text-neutral-300 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-neutral-300 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -245,7 +272,10 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <label htmlFor="subject" className="block text-sm font-medium text-neutral-300 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-neutral-300 mb-2"
+                  >
                     Subject *
                   </label>
                   <input
@@ -265,7 +295,10 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-300 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-neutral-300 mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -287,8 +320,8 @@ const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     isSubmitting
-                      ? "bg-neutral-700 text-neutral-400 cursor-not-allowed"
-                      : "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-purple-500/25"
+                      ? 'bg-neutral-700 text-neutral-400 cursor-not-allowed'
+                      : 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-purple-500/25'
                   }`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -300,11 +333,11 @@ const Contact = () => {
                       <span>Sending...</span>
                     </div>
                   ) : (
-                    "Send Message"
+                    'Send Message'
                   )}
                 </motion.button>
 
-                {submitStatus === "success" && (
+                {submitStatus === 'success' && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}

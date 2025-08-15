@@ -1,101 +1,140 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaChevronLeft,
+  FaChevronRight,
+} from 'react-icons/fa';
 
 // Import project images
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project1 from '../assets/projects/project-1.jpg';
+import project2 from '../assets/projects/project-2.jpg';
+import project3 from '../assets/projects/project-3.jpg';
+import project4 from '../assets/projects/project-4.jpg';
 
 const ProjectShowcase = () => {
   const [selectedProject, setSelectedProject] = useState(0);
-  
+
   const detailedProjects = [
     {
       id: 1,
-      title: "Task Manager Pro",
-      subtitle: "Advanced Todo Application",
-      description: "A sophisticated task management application with priority levels, due dates, and advanced filtering. Features dark theme, local storage persistence, and intuitive user interface.",
-      longDescription: "Built with React and modern hooks, this application showcases advanced state management using Context API. Features include drag-and-drop functionality, priority-based color coding, due date notifications, and comprehensive filtering options. The application uses Tailwind CSS for responsive design and Framer Motion for smooth animations.",
+      title: 'Task Manager Pro',
+      subtitle: 'Advanced Todo Application',
+      description:
+        'A sophisticated task management application with priority levels, due dates, and advanced filtering. Features dark theme, local storage persistence, and intuitive user interface.',
+      longDescription:
+        'Built with React and modern hooks, this application showcases advanced state management using Context API. Features include drag-and-drop functionality, priority-based color coding, due date notifications, and comprehensive filtering options. The application uses Tailwind CSS for responsive design and Framer Motion for smooth animations.',
       image: project1,
-      technologies: ["React", "Context API", "Tailwind CSS", "Local Storage", "Framer Motion"],
-      features: [
-        "Priority-based task management",
-        "Due date tracking and notifications",
-        "Advanced filtering and sorting",
-        "Dark theme with modern UI",
-        "Local storage persistence",
-        "Responsive design"
+      technologies: [
+        'React',
+        'Context API',
+        'Tailwind CSS',
+        'Local Storage',
+        'Framer Motion',
       ],
-      githubUrl: "https://github.com/NikhiL-Developer03/Task-Manger",
-      liveUrl: "#",
-      status: "Completed",
-      category: "Web Application"
+      features: [
+        'Priority-based task management',
+        'Due date tracking and notifications',
+        'Advanced filtering and sorting',
+        'Dark theme with modern UI',
+        'Local storage persistence',
+        'Responsive design',
+      ],
+      githubUrl: 'https://github.com/NikhiL-Developer03/Task-Manger',
+      liveUrl: '#',
+      status: 'Completed',
+      category: 'Web Application',
     },
     {
       id: 2,
-      title: "Personal Finance Tracker Plus",
-      subtitle: "Smart Expense Management",
-      description: "A comprehensive financial tracking application that helps users monitor expenses, set budgets, and analyze spending patterns with interactive charts and reports.",
-      longDescription: "Full-stack application built with React frontend and Node.js backend. Features include expense categorization, budget planning, financial goal tracking, and detailed analytics. Uses Chart.js for data visualization and MongoDB for data persistence.",
+      title: 'Personal Finance Tracker Plus',
+      subtitle: 'Smart Expense Management',
+      description:
+        'A comprehensive financial tracking application that helps users monitor expenses, set budgets, and analyze spending patterns with interactive charts and reports.',
+      longDescription:
+        'Full-stack application built with React frontend and Node.js backend. Features include expense categorization, budget planning, financial goal tracking, and detailed analytics. Uses Chart.js for data visualization and MongoDB for data persistence.',
       image: project2,
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Chart.js", "JWT"],
-      features: [
-        "Expense tracking and categorization",
-        "Budget planning and monitoring",
-        "Interactive financial charts",
-        "Goal setting and tracking",
-        "Monthly/yearly reports",
-        "Secure user authentication"
+      technologies: [
+        'React',
+        'Node.js',
+        'Express',
+        'MongoDB',
+        'Chart.js',
+        'JWT',
       ],
-      githubUrl: "https://github.com/NikhiL-Developer03/Personal-Finance-Tracker-Plus",
-      liveUrl: "#",
-      status: "In Development",
-      category: "Full-Stack Application"
+      features: [
+        'Expense tracking and categorization',
+        'Budget planning and monitoring',
+        'Interactive financial charts',
+        'Goal setting and tracking',
+        'Monthly/yearly reports',
+        'Secure user authentication',
+      ],
+      githubUrl:
+        'https://github.com/NikhiL-Developer03/Personal-Finance-Tracker-Plus',
+      liveUrl: '#',
+      status: 'In Development',
+      category: 'Full-Stack Application',
     },
     {
       id: 3,
-      title: "Event Platform",
-      subtitle: "Event Management System",
-      description: "A comprehensive platform for creating, managing, and attending events. Features event registration, attendee management, and real-time updates.",
-      longDescription: "Built with Next.js and TypeScript for type safety and performance. Integrates with external APIs for payment processing and email notifications. Features server-side rendering for optimal SEO and user experience.",
+      title: 'Event Platform',
+      subtitle: 'Event Management System',
+      description:
+        'A comprehensive platform for creating, managing, and attending events. Features event registration, attendee management, and real-time updates.',
+      longDescription:
+        'Built with Next.js and TypeScript for type safety and performance. Integrates with external APIs for payment processing and email notifications. Features server-side rendering for optimal SEO and user experience.',
       image: project3,
-      technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
-      features: [
-        "Event creation and management",
-        "User registration system",
-        "Payment integration",
-        "Real-time notifications",
-        "Advanced search and filtering",
-        "Mobile-responsive design"
+      technologies: [
+        'Next.js',
+        'TypeScript',
+        'Prisma',
+        'PostgreSQL',
+        'Tailwind CSS',
       ],
-      githubUrl: "https://github.com/NikhiL-Developer03/event_platform",
-      liveUrl: "https://event-platform-gamma-hazel.vercel.app/",
-      status: "Completed",
-      category: "Full-Stack Application"
+      features: [
+        'Event creation and management',
+        'User registration system',
+        'Payment integration',
+        'Real-time notifications',
+        'Advanced search and filtering',
+        'Mobile-responsive design',
+      ],
+      githubUrl: 'https://github.com/NikhiL-Developer03/event_platform',
+      liveUrl: 'https://event-platform-gamma-hazel.vercel.app/',
+      status: 'Completed',
+      category: 'Full-Stack Application',
     },
     {
       id: 4,
-      title: "Genius School Website",
-      subtitle: "Educational Institution Portal",
-      description: "A modern educational website with responsive design, featuring school information, departments, faculty profiles, and administrative tools.",
-      longDescription: "Server-side rendered application using Express.js and Handlebars. Features content management system for easy updates, contact forms, and dynamic routing for different school sections.",
+      title: 'Genius School Website',
+      subtitle: 'Educational Institution Portal',
+      description:
+        'A modern educational website with responsive design, featuring school information, departments, faculty profiles, and administrative tools.',
+      longDescription:
+        'Server-side rendered application using Express.js and Handlebars. Features content management system for easy updates, contact forms, and dynamic routing for different school sections.',
       image: project4,
-      technologies: ["Node.js", "Express", "Handlebars", "MongoDB", "Bootstrap"],
-      features: [
-        "Responsive institutional design",
-        "Faculty and department pages",
-        "Contact and inquiry forms",
-        "Content management system",
-        "SEO optimized pages",
-        "Admin dashboard"
+      technologies: [
+        'Node.js',
+        'Express',
+        'Handlebars',
+        'MongoDB',
+        'Bootstrap',
       ],
-      githubUrl: "https://github.com/NikhiL-Developer03/Genius",
-      liveUrl: "#",
-      status: "Completed",
-      category: "Web Application"
-    }
+      features: [
+        'Responsive institutional design',
+        'Faculty and department pages',
+        'Contact and inquiry forms',
+        'Content management system',
+        'SEO optimized pages',
+        'Admin dashboard',
+      ],
+      githubUrl: 'https://github.com/NikhiL-Developer03/Genius',
+      liveUrl: '#',
+      status: 'Completed',
+      category: 'Web Application',
+    },
   ];
 
   const nextProject = () => {
@@ -103,7 +142,9 @@ const ProjectShowcase = () => {
   };
 
   const prevProject = () => {
-    setSelectedProject((prev) => (prev - 1 + detailedProjects.length) % detailedProjects.length);
+    setSelectedProject(
+      (prev) => (prev - 1 + detailedProjects.length) % detailedProjects.length
+    );
   };
 
   const currentProject = detailedProjects[selectedProject];
@@ -117,16 +158,20 @@ const ProjectShowcase = () => {
         className="text-center mb-8 sm:mb-10 lg:mb-12"
       >
         <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6">
-          Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400">Projects</span>
+          Featured{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400">
+            Projects
+          </span>
         </h1>
         <p className="text-neutral-400 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
-          Explore my latest work showcasing modern web development, creative problem-solving, and innovative user experiences.
+          Explore my latest work showcasing modern web development, creative
+          problem-solving, and innovative user experiences.
         </p>
       </motion.div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center mb-6 sm:mb-8">
-          <motion.div 
+          <motion.div
             className="flex space-x-3 bg-neutral-900/90 backdrop-blur-xl rounded-full px-6 py-3 border border-neutral-700/60 shadow-2xl shadow-purple-900/20"
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -139,8 +184,8 @@ const ProjectShowcase = () => {
                 whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.9 }}
                 className={`w-5 h-5 rounded-full transition-all duration-300 relative ${
-                  selectedProject === index 
-                    ? 'bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 shadow-lg shadow-purple-500/60' 
+                  selectedProject === index
+                    ? 'bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 shadow-lg shadow-purple-500/60'
                     : 'bg-neutral-600 hover:bg-neutral-500'
                 }`}
                 title={project.title}
@@ -149,14 +194,13 @@ const ProjectShowcase = () => {
                   <motion.div
                     className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500"
                     layoutId="activeIndicator"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                   />
                 )}
               </motion.button>
             ))}
           </motion.div>
         </div>
-
 
         <AnimatePresence mode="wait">
           <motion.div
@@ -179,17 +223,19 @@ const ProjectShowcase = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-transparent to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
                 </div>
-                
+
                 {/* Status Badge */}
-                <motion.div 
+                <motion.div
                   className="absolute top-3 right-3 z-30"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <span className={`px-3 py-1.5 rounded-full text-xs font-semibold backdrop-blur-md ${
-                    currentProject.status === 'Completed' 
-                      ? 'bg-green-900/80 text-green-300 border border-green-600/50 shadow-lg shadow-green-900/30' 
-                      : 'bg-yellow-900/80 text-yellow-300 border border-yellow-600/50 shadow-lg shadow-yellow-900/30'
-                  }`}>
+                  <span
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold backdrop-blur-md ${
+                      currentProject.status === 'Completed'
+                        ? 'bg-green-900/80 text-green-300 border border-green-600/50 shadow-lg shadow-green-900/30'
+                        : 'bg-yellow-900/80 text-yellow-300 border border-yellow-600/50 shadow-lg shadow-yellow-900/30'
+                    }`}
+                  >
                     {currentProject.status}
                   </span>
                 </motion.div>
@@ -222,7 +268,7 @@ const ProjectShowcase = () => {
               {/* Content Section */}
               <div className="space-y-3 sm:space-y-4 lg:space-y-5 order-1 lg:order-2">
                 <div>
-                  <motion.span 
+                  <motion.span
                     className="text-purple-400 text-xs sm:text-sm font-semibold uppercase tracking-wider"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -230,7 +276,7 @@ const ProjectShowcase = () => {
                   >
                     {currentProject.category}
                   </motion.span>
-                  <motion.h2 
+                  <motion.h2
                     className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white mt-1 leading-tight"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -238,7 +284,7 @@ const ProjectShowcase = () => {
                   >
                     {currentProject.title}
                   </motion.h2>
-                  <motion.h3 
+                  <motion.h3
                     className="text-base xs:text-lg sm:text-xl text-neutral-300 mt-1"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -248,7 +294,7 @@ const ProjectShowcase = () => {
                   </motion.h3>
                 </div>
 
-                <motion.p 
+                <motion.p
                   className="text-neutral-300 leading-relaxed text-sm xs:text-base lg:text-lg"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -263,7 +309,9 @@ const ProjectShowcase = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7 }}
                 >
-                  <h4 className="text-base xs:text-lg font-semibold text-white mb-2">Technologies Used</h4>
+                  <h4 className="text-base xs:text-lg font-semibold text-white mb-2">
+                    Technologies Used
+                  </h4>
                   <div className="flex flex-wrap gap-1.5 xs:gap-2">
                     {currentProject.technologies.map((tech, index) => (
                       <motion.span
@@ -283,25 +331,29 @@ const ProjectShowcase = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
                 >
-                  <h4 className="text-base xs:text-lg font-semibold text-white mb-2">Key Features</h4>
+                  <h4 className="text-base xs:text-lg font-semibold text-white mb-2">
+                    Key Features
+                  </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 xs:gap-2">
                     {currentProject.features.map((feature, index) => (
-                      <motion.div 
-                        key={index} 
+                      <motion.div
+                        key={index}
                         className="flex items-center space-x-2"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.9 + index * 0.1 }}
                       >
                         <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex-shrink-0" />
-                        <span className="text-neutral-300 text-xs xs:text-sm">{feature}</span>
+                        <span className="text-neutral-300 text-xs xs:text-sm">
+                          {feature}
+                        </span>
                       </motion.div>
                     ))}
                   </div>
                 </motion.div>
 
                 {/* Action Buttons */}
-                <motion.div 
+                <motion.div
                   className="flex flex-col xs:flex-row gap-3 xs:gap-4 pt-2"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -335,9 +387,8 @@ const ProjectShowcase = () => {
           </motion.div>
         </AnimatePresence>
 
-
         {/* Enhanced Navigation */}
-        <motion.div 
+        <motion.div
           className="flex justify-between items-center mt-6 sm:mt-8 px-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -353,7 +404,7 @@ const ProjectShowcase = () => {
             <span className="hidden xs:inline">Previous</span>
             <span className="xs:hidden">Prev</span>
           </motion.button>
-          
+
           <div className="flex items-center space-x-3">
             <span className="text-neutral-500 text-xs xs:text-sm font-medium">
               {selectedProject + 1} of {detailedProjects.length}
@@ -363,7 +414,7 @@ const ProjectShowcase = () => {
               Project Showcase
             </span>
           </div>
-          
+
           <motion.button
             onClick={nextProject}
             whileHover={{ scale: 1.05, x: 5 }}

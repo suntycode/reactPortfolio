@@ -74,17 +74,20 @@ Portfolio/
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/NikhiL-Developer03/Portfolio.git
    cd Portfolio
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    ```
@@ -132,32 +135,38 @@ The portfolio is designed with a mobile-first approach and includes:
 ## 🌟 Sections Overview
 
 ### Hero Section
+
 - Professional introduction with animated elements
 - Call-to-action buttons
 - Dynamic statistics display
 
 ### About Section
+
 - Personal background and expertise
 - Skills highlights with icons
 - Professional statistics
 - Interactive image with floating elements
 
 ### Skills Section
+
 - Technical skills with visual progress indicators
 - Categorized skill sets (Frontend, Backend, Tools, etc.)
 - Learning indicators for emerging technologies
 
 ### Timeline Section
+
 - Tabbed interface for Experience, Education, and Certifications
 - Interactive timeline with achievements
 - Technology stacks for each role/education
 
 ### Projects Section
+
 - Interactive carousel showcasing featured projects
 - Detailed project descriptions and technologies used
 - Live demo and GitHub repository links
 
 ### Contact Section
+
 - Contact form with validation
 - Social media links
 - Professional contact information
@@ -173,6 +182,7 @@ The portfolio is designed with a mobile-first approach and includes:
 ## 📧 Contact
 
 **Nikhil Developer**
+
 - Email: nikhil.developer03@gmail.com
 - LinkedIn: [nikhil-web-developer](https://www.linkedin.com/in/nikhil-web-developer/)
 - GitHub: [NikhiL-Developer03](https://github.com/NikhiL-Developer03)

@@ -1,12 +1,18 @@
-import  { useState, useEffect } from "react";
-import { HERO_CONTENT } from "../constants";
-import profilePic from "../assets/Nikhil.webp";
-import { motion } from "framer-motion";
-import { FaDownload, FaCode, FaRocket } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import { HERO_CONTENT } from '../constants';
+import profilePic from '../assets/Nikhil.webp';
+import { motion } from 'framer-motion';
+
+import { FaDownload, FaCode, FaRocket } from 'react-icons/fa';
 
 const Hero = () => {
-  const [typedText, setTypedText] = useState("");
-  const roles = ["Full Stack Developer", "React Specialist", "Cloud Engineer", "Problem Solver"];
+  const [typedText, setTypedText] = useState('');
+  const roles = [
+    'Full Stack Developer',
+    'React Specialist',
+    'Cloud Engineer',
+    'Problem Solver',
+  ];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -17,15 +23,13 @@ const Hero = () => {
 
     if (!isDeleting && typedText === currentRole) {
       setTimeout(() => setIsDeleting(true), nextDelay);
-    } else if (isDeleting && typedText === "") {
+    } else if (isDeleting && typedText === '') {
       setIsDeleting(false);
       setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
     } else {
       setTimeout(() => {
-        setTypedText(prev => 
-          isDeleting 
-            ? prev.slice(0, -1)
-            : currentRole.slice(0, prev.length + 1)
+        setTypedText((prev) =>
+          isDeleting ? prev.slice(0, -1) : currentRole.slice(0, prev.length + 1)
         );
       }, typingSpeed);
     }
@@ -36,21 +40,20 @@ const Hero = () => {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 0.5, delay: delay }
-    }
+      transition: { duration: 0.5, delay: delay },
+    },
   });
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 min-h-screen flex items-center">
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 xl:gap-20 w-full max-w-7xl mx-auto">
-
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <motion.h1
             variants={container(0)}
@@ -64,7 +67,7 @@ const Hero = () => {
             </span>
           </motion.h1>
 
-          <motion.div 
+          <motion.div
             variants={container(0.5)}
             initial="hidden"
             animate="visible"
@@ -76,15 +79,14 @@ const Hero = () => {
             </span>
           </motion.div>
 
-          <motion.p  
+          <motion.p
             variants={container(1)}
             initial="hidden"
-            animate="visible" 
+            animate="visible"
             className="text-sm xs:text-base sm:text-lg md:text-xl font-light tracking-tighter text-neutral-300 leading-relaxed mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0"
           >
             {HERO_CONTENT}
           </motion.p>
-
 
           <motion.div
             variants={container(1.5)}
@@ -125,7 +127,6 @@ const Hero = () => {
             </motion.a>
           </motion.div>
 
-
           <motion.div
             variants={container(2)}
             initial="hidden"
@@ -133,20 +134,27 @@ const Hero = () => {
             className="grid grid-cols-3 gap-3 xs:gap-4 sm:gap-6 max-w-xs xs:max-w-sm sm:max-w-md mx-auto lg:mx-0"
           >
             <div className="text-center">
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white">7+</h3>
+              <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white">
+                7+
+              </h3>
               <p className="text-neutral-400 text-xs sm:text-sm">Projects</p>
             </div>
             <div className="text-center">
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white">1+</h3>
+              <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white">
+                1+
+              </h3>
               <p className="text-neutral-400 text-xs sm:text-sm">Years Exp.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white">7+</h3>
-              <p className="text-neutral-400 text-xs sm:text-sm">Happy Clients</p>
+              <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white">
+                7+
+              </h3>
+              <p className="text-neutral-400 text-xs sm:text-sm">
+                Happy Clients
+              </p>
             </div>
           </motion.div>
         </div>
-
 
         <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
           <motion.div
@@ -155,29 +163,31 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.2 }}
             className="relative group"
           >
-
             <div className="absolute -inset-2 xs:-inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             <div className="absolute -inset-1 xs:-inset-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-            
 
-            <img 
+            <img
               className="relative rounded-full w-40 h-40 xs:w-48 xs:h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover ring-4 ring-purple-500/50 shadow-2xl transition-transform duration-300 group-hover:scale-105"
-              src={profilePic} 
-              alt="Nikhil Developer" 
+              src={profilePic}
+              alt="Nikhil Developer"
             />
-            
 
             <motion.div
               animate={{ y: [-10, 10, -10] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               className="absolute -top-1 -right-1 xs:-top-2 xs:-right-2 sm:-top-4 sm:-right-4 w-6 h-6 xs:w-8 xs:h-8 sm:w-12 sm:h-12 bg-purple-600 rounded-full flex items-center justify-center shadow-lg"
             >
               <FaCode className="text-white text-xs xs:text-sm sm:text-xl" />
             </motion.div>
-            
+
             <motion.div
               animate={{ y: [10, -10, 10] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: 'easeInOut',
+                delay: 1.5,
+              }}
               className="absolute -bottom-1 -left-1 xs:-bottom-2 xs:-left-2 sm:-bottom-4 sm:-left-4 w-5 h-5 xs:w-6 xs:h-6 sm:w-10 sm:h-10 bg-pink-600 rounded-full flex items-center justify-center shadow-lg"
             >
               <FaRocket className="text-white text-xs sm:text-base" />
@@ -185,7 +195,6 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-
 
       <motion.div
         initial={{ opacity: 0 }}

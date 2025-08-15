@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    // Project structure
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // ECMAScript settings
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    // JSX support
+    "jsx": "react-jsx",
+
+    // Module resolution
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // Migration helpers
+    "allowJs": true, // <-- keeps .js/.jsx working during migration
+    "checkJs": false, // <-- avoids flagging JS errors early
+    "isolatedModules": true,
+    "skipLibCheck": true,
+
+    // Type checking
+    "strict": true,
+    "noUncheckedIndexedAccess": false, // <-- disable for migration; re-enable later
+    "exactOptionalPropertyTypes": false, // <-- disable for migration; re-enable later
+
+    // Output controls
+    "sourceMap": true,
+    "declaration": false, // you can enable later if building a library
+    "declarationMap": false
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
