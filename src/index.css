@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: "Inter",sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  overflow-x: hidden;
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+
+*:focus {
+  outline: 2px solid theme('colors.purple.500');
+  outline-offset: 2px;
+}
+
+
+/* Hide scrollbar completely */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* For IE and Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
