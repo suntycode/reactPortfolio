@@ -126,15 +126,15 @@ const Skills = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-8 sm:mb-10 lg:mb-12"
+        className="mb-8 text-center sm:mb-10 lg:mb-12"
       >
-        <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6">
+        <h1 className="mb-4 text-4xl font-bold xs:text-5xl sm:text-6xl lg:mb-6 lg:text-7xl">
           Skills &{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400">
+          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
             Technologies
           </span>
         </h1>
-        <p className="text-neutral-400 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
+        <p className="mx-auto max-w-3xl px-4 text-base leading-relaxed text-neutral-400 sm:text-lg lg:text-xl">
           A comprehensive overview of my technical expertise and the tools I use
           to build exceptional digital experiences.
         </p>
@@ -151,19 +151,19 @@ const Skills = () => {
             <motion.div
               key={category.title}
               variants={itemVariants}
-              className="bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 backdrop-blur-xl border border-neutral-700/50 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl shadow-purple-900/10"
+              className="rounded-2xl border border-neutral-700/50 bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 p-4 shadow-2xl shadow-purple-900/10 backdrop-blur-xl sm:p-6 lg:p-8"
             >
               <motion.h3
-                className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8"
+                className="mb-6 text-center text-xl font-bold xs:text-2xl sm:mb-8 sm:text-3xl lg:text-4xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
               >
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                   {category.title}
                 </span>
               </motion.h3>
-              <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3 sm:gap-4 md:gap-6">
+              <div className="grid grid-cols-2 gap-3 xs:grid-cols-3 sm:grid-cols-4 sm:gap-4 md:grid-cols-5 md:gap-6 lg:grid-cols-6 xl:grid-cols-7">
                 {category.skills.map((skill, skillIndex) => {
                   const IconComponent = skill.icon;
                   return (
@@ -171,7 +171,7 @@ const Skills = () => {
                       key={skill.name}
                       whileHover={{ scale: 1.05, y: -5 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-neutral-800/60 backdrop-blur-sm rounded-xl p-3 xs:p-4 sm:p-6 flex flex-col items-center space-y-2 sm:space-y-3 border border-neutral-600/40 hover:border-purple-500/50 transition-all duration-300 group relative overflow-hidden shadow-lg"
+                      className="group relative flex flex-col items-center space-y-2 overflow-hidden rounded-xl border border-neutral-600/40 bg-neutral-800/60 p-3 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50 xs:p-4 sm:space-y-3 sm:p-6"
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: skillIndex * 0.05 }}
@@ -182,14 +182,14 @@ const Skills = () => {
                       />
 
                       <IconComponent
-                        className={`text-2xl xs:text-3xl sm:text-4xl lg:text-5xl ${skill.color} transition-transform duration-300 group-hover:scale-110 drop-shadow-lg`}
+                        className={`text-2xl xs:text-3xl sm:text-4xl lg:text-5xl ${skill.color} drop-shadow-lg transition-transform duration-300 group-hover:scale-110`}
                       />
-                      <span className="text-xs sm:text-sm font-medium text-neutral-300 text-center leading-tight">
+                      <span className="text-center text-xs font-medium leading-tight text-neutral-300 sm:text-sm">
                         {skill.name}
                       </span>
 
                       <motion.span
-                        className="text-xs text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold"
+                        className="text-xs font-semibold text-purple-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         whileHover={{ scale: 1.1 }}
                       >
                         {skill.level}%
@@ -206,23 +206,23 @@ const Skills = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-8 sm:mt-10 lg:mt-12 bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 backdrop-blur-xl border border-neutral-700/50 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-purple-900/10"
+          className="mt-8 rounded-2xl border border-neutral-700/50 bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 p-6 shadow-2xl shadow-purple-900/10 backdrop-blur-xl sm:mt-10 sm:p-8 lg:mt-12"
         >
           <div className="text-center">
-            <h3 className="text-base xs:text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-3 sm:mb-4">
+            <h3 className="mb-3 text-base font-semibold text-white xs:text-lg sm:mb-4 sm:text-xl lg:text-2xl">
               Always Learning &{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Growing
               </span>
             </h3>
-            <p className="text-neutral-400 text-xs xs:text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed px-4">
+            <p className="mx-auto max-w-2xl px-4 text-xs leading-relaxed text-neutral-400 xs:text-sm sm:text-base lg:text-lg">
               I'm passionate about staying up-to-date with the latest
               technologies and best practices. Currently exploring AI/ML
               integration, advanced cloud architectures, and modern DevOps
               practices.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-4 sm:mt-6 px-4">
+            <div className="mt-4 flex flex-wrap justify-center gap-2 px-4 sm:mt-6 sm:gap-3">
               {['AI/ML', 'DevOps', 'Microservices', 'GraphQL', 'Docker'].map(
                 (tech, index) => (
                   <motion.span
@@ -231,7 +231,7 @@ const Skills = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     whileHover={{ scale: 1.05 }}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 border border-purple-500/40 text-purple-300 px-3 xs:px-4 py-2 rounded-full text-xs sm:text-sm backdrop-blur-sm hover:border-purple-400/60 transition-all duration-300"
+                    className="rounded-full border border-purple-500/40 bg-gradient-to-r from-purple-600/30 to-pink-600/30 px-3 py-2 text-xs text-purple-300 backdrop-blur-sm transition-all duration-300 hover:border-purple-400/60 xs:px-4 sm:text-sm"
                   >
                     📚 {tech}
                   </motion.span>

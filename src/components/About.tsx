@@ -51,33 +51,33 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="text-center my-6 sm:my-8 md:my-12 lg:my-16"
+        className="my-6 text-center sm:my-8 md:my-12 lg:my-16"
       >
-        <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold mb-3">
+        <h1 className="mb-3 text-2xl font-bold xs:text-3xl sm:text-4xl lg:text-5xl">
           About <span className="text-neutral-500">Me</span>
         </h1>
-        <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <div className="mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></div>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-12 xl:gap-16 mb-8 lg:mb-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-8 flex flex-col items-center gap-6 lg:mb-12 lg:flex-row lg:gap-12 xl:gap-16">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.8 }}
-            className="w-full lg:w-5/12 flex justify-center"
+            className="flex w-full justify-center lg:w-5/12"
           >
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="absolute -inset-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
+            <div className="group relative">
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-purple-600/30 to-pink-600/30 blur-xl transition-all duration-500 group-hover:blur-2xl"></div>
+              <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-lg transition-all duration-500 group-hover:blur-xl"></div>
 
               <div className="relative">
                 <img
-                  className="rounded-2xl w-56 h-56 xs:w-64 xs:h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover shadow-2xl border-2 border-neutral-700/50 group-hover:border-purple-500/50 transition-all duration-500 group-hover:scale-105"
+                  className="h-56 w-56 rounded-2xl border-2 border-neutral-700/50 object-cover shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:border-purple-500/50 xs:h-64 xs:w-64 sm:h-72 sm:w-72 lg:h-80 lg:w-80"
                   src={aboutImg}
                   alt="About Nikhil"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/30 via-transparent to-transparent rounded-2xl"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-neutral-900/30 via-transparent to-transparent"></div>
 
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -86,9 +86,9 @@ const About = () => {
                     repeat: Infinity,
                     ease: 'linear',
                   }}
-                  className="absolute -top-4 -right-4 w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
+                  className="absolute -right-4 -top-4 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg"
                 >
-                  <FaGraduationCap className="text-white text-lg" />
+                  <FaGraduationCap className="text-lg text-white" />
                 </motion.div>
 
                 <motion.div
@@ -98,9 +98,9 @@ const About = () => {
                     repeat: Infinity,
                     ease: 'easeInOut',
                   }}
-                  className="absolute -bottom-3 -left-3 w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg"
+                  className="absolute -bottom-3 -left-3 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 shadow-lg"
                 >
-                  <FaLightbulb className="text-white text-sm" />
+                  <FaLightbulb className="text-sm text-white" />
                 </motion.div>
               </div>
             </div>
@@ -118,7 +118,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.6 }}
-                  className="text-2xl xs:text-3xl sm:text-4xl font-bold text-white mb-3"
+                  className="mb-3 text-2xl font-bold text-white xs:text-3xl sm:text-4xl"
                 >
                   Passionate Developer &
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -131,7 +131,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-base sm:text-lg leading-relaxed text-neutral-300 max-w-2xl mx-auto lg:mx-0"
+                  className="mx-auto max-w-2xl text-base leading-relaxed text-neutral-300 sm:text-lg lg:mx-0"
                 >
                   {ABOUT_TEXT}
                 </motion.p>
@@ -141,7 +141,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 30 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="grid grid-cols-2 lg:grid-cols-4 gap-3"
+                className="grid grid-cols-2 gap-3 lg:grid-cols-4"
               >
                 {highlights.map((item, index) => {
                   const IconComponent = item.icon;
@@ -150,22 +150,22 @@ const About = () => {
                       key={item.title}
                       whileHover={{ scale: 1.05, y: -5 }}
                       whileTap={{ scale: 0.95 }}
-                      className="group bg-neutral-900/50 backdrop-blur-sm rounded-xl p-4 border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300 relative overflow-hidden"
+                      className="group relative overflow-hidden rounded-xl border border-neutral-700/50 bg-neutral-900/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50"
                     >
                       <div
-                        className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                        className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}
                       ></div>
 
                       <div className="relative z-10 text-center">
                         <div
-                          className={`w-10 h-10 mx-auto mb-2 rounded-lg bg-gradient-to-br ${item.color} p-2 shadow-lg group-hover:shadow-xl transition-shadow duration-300`}
+                          className={`mx-auto mb-2 h-10 w-10 rounded-lg bg-gradient-to-br ${item.color} p-2 shadow-lg transition-shadow duration-300 group-hover:shadow-xl`}
                         >
-                          <IconComponent className="w-full h-full text-white" />
+                          <IconComponent className="h-full w-full text-white" />
                         </div>
-                        <h3 className="font-semibold text-white mb-1 text-sm">
+                        <h3 className="mb-1 text-sm font-semibold text-white">
                           {item.title}
                         </h3>
-                        <p className="text-xs text-neutral-400 leading-tight">
+                        <p className="text-xs leading-tight text-neutral-400">
                           {item.description}
                         </p>
                       </div>
@@ -181,18 +181,18 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-3 gap-3 sm:gap-6 mb-6 lg:mb-8"
+          className="mb-6 grid grid-cols-3 gap-3 sm:gap-6 lg:mb-8"
         >
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
               whileHover={{ scale: 1.05 }}
-              className="text-center p-3 sm:p-4 bg-neutral-900/30 backdrop-blur-sm rounded-xl border border-neutral-700/30"
+              className="rounded-xl border border-neutral-700/30 bg-neutral-900/30 p-3 text-center backdrop-blur-sm sm:p-4"
             >
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-1">
+              <h3 className="mb-1 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-xl font-bold text-transparent sm:text-2xl lg:text-3xl">
                 {stat.number}
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-400">
+              <p className="text-xs text-neutral-400 sm:text-sm">
                 {stat.label}
               </p>
             </motion.div>
@@ -211,10 +211,10 @@ const About = () => {
                 .getElementById('contact')
                 .scrollIntoView({ behavior: 'smooth' })
             }
-            className="group relative bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-purple-500/25 transform hover:scale-105"
+            className="group relative transform rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-pink-700 hover:shadow-purple-500/25"
           >
             <span className="relative z-10">Let's Work Together</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-700 to-pink-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
           </button>
         </motion.div>
       </div>

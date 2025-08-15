@@ -167,24 +167,24 @@ const Timeline = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-8 sm:mb-10 lg:mb-12"
+        className="mb-8 text-center sm:mb-10 lg:mb-12"
       >
-        <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6">
+        <h1 className="mb-4 text-4xl font-bold xs:text-5xl sm:text-6xl lg:mb-6 lg:text-7xl">
           Professional{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400">
+          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
             Journey
           </span>
         </h1>
-        <p className="text-neutral-400 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
+        <p className="mx-auto max-w-3xl px-4 text-base leading-relaxed text-neutral-400 sm:text-lg lg:text-xl">
           Explore my career path, educational background, and professional
           achievements that have shaped my expertise.
         </p>
       </motion.div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center mb-6 sm:mb-8">
+        <div className="mb-6 flex justify-center sm:mb-8">
           <motion.div
-            className="flex space-x-1 bg-neutral-900/90 backdrop-blur-xl rounded-full p-1 border border-neutral-700/60 shadow-2xl shadow-purple-900/20"
+            className="flex space-x-1 rounded-full border border-neutral-700/60 bg-neutral-900/90 p-1 shadow-2xl shadow-purple-900/20 backdrop-blur-xl"
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -197,14 +197,14 @@ const Timeline = () => {
                   onClick={() => setActiveTab(tab.id)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 ${
+                  className={`flex items-center space-x-2 rounded-full px-4 py-2 transition-all duration-300 sm:px-6 sm:py-3 ${
                     activeTab === tab.id
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/30'
-                      : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                      : 'text-neutral-400 hover:bg-neutral-800/50 hover:text-white'
                   }`}
                 >
-                  <IconComponent className="w-4 h-4" />
-                  <span className="text-sm sm:text-base font-medium">
+                  <IconComponent className="h-4 w-4" />
+                  <span className="text-sm font-medium sm:text-base">
                     {tab.label}
                   </span>
                 </motion.button>
@@ -213,16 +213,16 @@ const Timeline = () => {
           </motion.div>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="mx-auto max-w-5xl">
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 backdrop-blur-xl border border-neutral-700/50 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-purple-900/10"
+            className="relative rounded-2xl border border-neutral-700/50 bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 p-6 shadow-2xl shadow-purple-900/10 backdrop-blur-xl sm:p-8"
           >
             {/* Timeline Line */}
-            <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500"></div>
+            <div className="absolute bottom-8 left-8 top-8 w-0.5 bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500"></div>
 
             {getCurrentData().map((item, index) => (
               <motion.div
@@ -230,11 +230,11 @@ const Timeline = () => {
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative flex items-start mb-8 last:mb-0"
+                className="relative mb-8 flex items-start last:mb-0"
               >
                 {/* Icon Circle */}
                 <motion.div
-                  className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-neutral-800 to-neutral-900 border-2 border-neutral-600/50 rounded-full flex items-center justify-center mr-6 z-10 shadow-lg"
+                  className="z-10 mr-6 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-2 border-neutral-600/50 bg-gradient-to-br from-neutral-800 to-neutral-900 shadow-lg"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -243,14 +243,14 @@ const Timeline = () => {
 
                 {/* Content Card */}
                 <motion.div
-                  className="flex-1 bg-neutral-800/60 backdrop-blur-sm rounded-xl p-6 border border-neutral-600/40 hover:border-purple-500/50 transition-all duration-300 shadow-lg"
+                  className="flex-1 rounded-xl border border-neutral-600/40 bg-neutral-800/60 p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50"
                   whileHover={{ scale: 1.02, y: -2 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="flex justify-between items-start mb-4 flex-wrap gap-2">
+                  <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
                     <div>
                       <motion.h3
-                        className="text-xl sm:text-2xl font-bold text-white mb-1"
+                        className="mb-1 text-xl font-bold text-white sm:text-2xl"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
@@ -258,7 +258,7 @@ const Timeline = () => {
                         {item.role}
                       </motion.h3>
                       <motion.p
-                        className="text-purple-400 font-semibold text-lg"
+                        className="text-lg font-semibold text-purple-400"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
@@ -267,7 +267,7 @@ const Timeline = () => {
                       </motion.p>
                     </div>
                     <motion.span
-                      className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 text-purple-300 px-3 py-1.5 rounded-full text-sm font-medium border border-purple-500/40 backdrop-blur-sm"
+                      className="rounded-full border border-purple-500/40 bg-gradient-to-r from-purple-600/30 to-pink-600/30 px-3 py-1.5 text-sm font-medium text-purple-300 backdrop-blur-sm"
                       whileHover={{ scale: 1.05 }}
                     >
                       {item.year}
@@ -275,7 +275,7 @@ const Timeline = () => {
                   </div>
 
                   <motion.p
-                    className="text-neutral-300 mb-6 leading-relaxed"
+                    className="mb-6 leading-relaxed text-neutral-300"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
@@ -285,14 +285,14 @@ const Timeline = () => {
 
                   {/* Technologies */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-neutral-400 mb-3">
+                    <h4 className="mb-3 text-sm font-semibold text-neutral-400">
                       Technologies & Skills
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {item.technologies.map((tech, techIndex) => (
                         <motion.span
                           key={techIndex}
-                          className="px-2.5 py-1.5 bg-neutral-800/80 text-purple-300 rounded-full text-xs border border-neutral-600/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300"
+                          className="rounded-full border border-neutral-600/50 bg-neutral-800/80 px-2.5 py-1.5 text-xs text-purple-300 backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50"
                           whileHover={{ scale: 1.05 }}
                           initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
@@ -306,10 +306,10 @@ const Timeline = () => {
 
                   {/* Achievements */}
                   <div>
-                    <h4 className="text-sm font-semibold text-neutral-400 mb-3">
+                    <h4 className="mb-3 text-sm font-semibold text-neutral-400">
                       Key Achievements
                     </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
                       {item.achievements.map((achievement, achIndex) => (
                         <motion.div
                           key={achIndex}
@@ -318,8 +318,8 @@ const Timeline = () => {
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.6 + achIndex * 0.1 }}
                         >
-                          <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-neutral-300 text-sm">
+                          <div className="h-2 w-2 flex-shrink-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                          <span className="text-sm text-neutral-300">
                             {achievement}
                           </span>
                         </motion.div>

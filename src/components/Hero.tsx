@@ -52,14 +52,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 min-h-screen flex items-center">
-      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 xl:gap-20 w-full max-w-7xl mx-auto">
-        <div className="w-full lg:w-1/2 text-center lg:text-left">
+    <div className="container mx-auto flex min-h-screen items-center px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-8 lg:flex-row lg:gap-16 xl:gap-20">
+        <div className="w-full text-center lg:w-1/2 lg:text-left">
           <motion.h1
             variants={container(0)}
             initial="hidden"
             animate="visible"
-            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin tracking-tight mb-4 lg:mb-8 leading-tight"
+            className="mb-4 text-3xl font-thin leading-tight tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:mb-8 lg:text-7xl xl:text-8xl"
           >
             <span className="text-white">Hi, I'm </span>
             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
@@ -73,7 +73,7 @@ const Hero = () => {
             animate="visible"
             className="mb-6 lg:mb-8"
           >
-            <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tight text-transparent block min-h-[1.5rem] xs:min-h-[2rem] sm:min-h-[2.5rem] md:min-h-[3rem]">
+            <span className="block min-h-[1.5rem] bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-lg tracking-tight text-transparent xs:min-h-[2rem] xs:text-xl sm:min-h-[2.5rem] sm:text-2xl md:min-h-[3rem] md:text-3xl lg:text-4xl">
               {typedText}
               <span className="animate-pulse">|</span>
             </span>
@@ -83,7 +83,7 @@ const Hero = () => {
             variants={container(1)}
             initial="hidden"
             animate="visible"
-            className="text-sm xs:text-base sm:text-lg md:text-xl font-light tracking-tighter text-neutral-300 leading-relaxed mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0"
+            className="mx-auto mb-8 max-w-2xl text-sm font-light leading-relaxed tracking-tighter text-neutral-300 xs:text-base sm:text-lg md:text-xl lg:mx-0 lg:mb-12"
           >
             {HERO_CONTENT}
           </motion.p>
@@ -92,13 +92,13 @@ const Hero = () => {
             variants={container(1.5)}
             initial="hidden"
             animate="visible"
-            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 lg:mb-12"
+            className="mb-8 flex flex-col justify-center gap-4 sm:flex-row lg:mb-12 lg:justify-start"
           >
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('projects')}
-              className="flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-purple-500/25 w-full sm:w-auto"
+              className="flex w-full items-center justify-center space-x-2 rounded-lg bg-purple-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:bg-purple-700 hover:shadow-purple-500/25 sm:w-auto"
             >
               <FaRocket />
               <span>View My Work</span>
@@ -108,7 +108,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('contact')}
-              className="flex items-center justify-center space-x-2 bg-transparent border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-full sm:w-auto"
+              className="flex w-full items-center justify-center space-x-2 rounded-lg border-2 border-purple-500 bg-transparent px-6 py-3 font-semibold text-purple-400 transition-all duration-300 hover:bg-purple-500 hover:text-white sm:w-auto"
             >
               <FaCode />
               <span>Let's Talk</span>
@@ -120,7 +120,7 @@ const Hero = () => {
               target="_blank"
               href="https://drive.google.com/file/d/1oJaWeG6Uh4vwutbOA1p0k0f70y0QfaOD/view?usp=sharing"
               download
-              className="flex items-center justify-center space-x-2 bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-neutral-600 w-full sm:w-auto"
+              className="flex w-full items-center justify-center space-x-2 rounded-lg border border-neutral-600 bg-neutral-800 px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-neutral-700 sm:w-auto"
             >
               <FaDownload />
               <span>Download CV</span>
@@ -131,43 +131,43 @@ const Hero = () => {
             variants={container(2)}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-3 gap-3 xs:gap-4 sm:gap-6 max-w-xs xs:max-w-sm sm:max-w-md mx-auto lg:mx-0"
+            className="mx-auto grid max-w-xs grid-cols-3 gap-3 xs:max-w-sm xs:gap-4 sm:max-w-md sm:gap-6 lg:mx-0"
           >
             <div className="text-center">
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white">
+              <h3 className="text-lg font-bold text-white xs:text-xl sm:text-2xl">
                 7+
               </h3>
-              <p className="text-neutral-400 text-xs sm:text-sm">Projects</p>
+              <p className="text-xs text-neutral-400 sm:text-sm">Projects</p>
             </div>
             <div className="text-center">
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white">
+              <h3 className="text-lg font-bold text-white xs:text-xl sm:text-2xl">
                 1+
               </h3>
-              <p className="text-neutral-400 text-xs sm:text-sm">Years Exp.</p>
+              <p className="text-xs text-neutral-400 sm:text-sm">Years Exp.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white">
+              <h3 className="text-lg font-bold text-white xs:text-xl sm:text-2xl">
                 7+
               </h3>
-              <p className="text-neutral-400 text-xs sm:text-sm">
+              <p className="text-xs text-neutral-400 sm:text-sm">
                 Happy Clients
               </p>
             </div>
           </motion.div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+        <div className="mt-8 flex w-full justify-center lg:mt-0 lg:w-1/2">
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
-            className="relative group"
+            className="group relative"
           >
-            <div className="absolute -inset-2 xs:-inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-            <div className="absolute -inset-1 xs:-inset-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+            <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 opacity-30 blur-lg transition-opacity duration-300 group-hover:opacity-50 xs:-inset-4"></div>
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 blur-md transition-opacity duration-300 group-hover:opacity-40 xs:-inset-2"></div>
 
             <img
-              className="relative rounded-full w-40 h-40 xs:w-48 xs:h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover ring-4 ring-purple-500/50 shadow-2xl transition-transform duration-300 group-hover:scale-105"
+              className="relative h-40 w-40 rounded-full object-cover shadow-2xl ring-4 ring-purple-500/50 transition-transform duration-300 group-hover:scale-105 xs:h-48 xs:w-48 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 xl:h-96 xl:w-96"
               src={profilePic}
               alt="Nikhil Developer"
             />
@@ -175,9 +175,9 @@ const Hero = () => {
             <motion.div
               animate={{ y: [-10, 10, -10] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-1 -right-1 xs:-top-2 xs:-right-2 sm:-top-4 sm:-right-4 w-6 h-6 xs:w-8 xs:h-8 sm:w-12 sm:h-12 bg-purple-600 rounded-full flex items-center justify-center shadow-lg"
+              className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-purple-600 shadow-lg xs:-right-2 xs:-top-2 xs:h-8 xs:w-8 sm:-right-4 sm:-top-4 sm:h-12 sm:w-12"
             >
-              <FaCode className="text-white text-xs xs:text-sm sm:text-xl" />
+              <FaCode className="text-xs text-white xs:text-sm sm:text-xl" />
             </motion.div>
 
             <motion.div
@@ -188,9 +188,9 @@ const Hero = () => {
                 ease: 'easeInOut',
                 delay: 1.5,
               }}
-              className="absolute -bottom-1 -left-1 xs:-bottom-2 xs:-left-2 sm:-bottom-4 sm:-left-4 w-5 h-5 xs:w-6 xs:h-6 sm:w-10 sm:h-10 bg-pink-600 rounded-full flex items-center justify-center shadow-lg"
+              className="absolute -bottom-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-pink-600 shadow-lg xs:-bottom-2 xs:-left-2 xs:h-6 xs:w-6 sm:-bottom-4 sm:-left-4 sm:h-10 sm:w-10"
             >
-              <FaRocket className="text-white text-xs sm:text-base" />
+              <FaRocket className="text-xs text-white sm:text-base" />
             </motion.div>
           </motion.div>
         </div>
@@ -200,17 +200,17 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:block"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 transform sm:block"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-neutral-400 rounded-full flex justify-center"
+          className="flex h-10 w-6 justify-center rounded-full border-2 border-neutral-400"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-neutral-400 rounded-full mt-2"
+            className="mt-2 h-3 w-1 rounded-full bg-neutral-400"
           />
         </motion.div>
       </motion.div>

@@ -89,23 +89,23 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-8 sm:mb-10 lg:mb-12"
+        className="mb-8 text-center sm:mb-10 lg:mb-12"
       >
-        <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 lg:mb-6">
+        <h1 className="mb-4 text-4xl font-bold xs:text-5xl sm:text-6xl lg:mb-6 lg:text-7xl">
           Let's Work{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400">
+          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
             Together
           </span>
         </h1>
-        <p className="text-neutral-400 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
+        <p className="mx-auto max-w-3xl px-4 text-base leading-relaxed text-neutral-400 sm:text-lg lg:text-xl">
           Ready to bring your ideas to life? Let's collaborate and create
           something amazing together.
         </p>
       </motion.div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 backdrop-blur-xl border border-neutral-700/50 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl shadow-purple-900/10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="rounded-2xl border border-neutral-700/50 bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 p-6 shadow-2xl shadow-purple-900/10 backdrop-blur-xl sm:p-8 lg:p-10">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -50 }}
@@ -114,18 +114,18 @@ const Contact = () => {
             >
               <div>
                 <motion.h2
-                  className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4"
+                  className="mb-4 text-2xl font-bold text-white sm:text-3xl lg:text-4xl"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
                   Get In{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                     Touch
                   </span>
                 </motion.h2>
                 <motion.p
-                  className="text-neutral-300 leading-relaxed text-base sm:text-lg"
+                  className="text-base leading-relaxed text-neutral-300 sm:text-lg"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
@@ -143,7 +143,7 @@ const Contact = () => {
                   const content = info.link ? (
                     <a
                       href={info.link}
-                      className="text-neutral-300 hover:text-white transition-colors duration-300"
+                      className="text-neutral-300 transition-colors duration-300 hover:text-white"
                     >
                       {info.content}
                     </a>
@@ -155,20 +155,20 @@ const Contact = () => {
                     <motion.div
                       key={index}
                       whileHover={{ x: 5, scale: 1.02 }}
-                      className="flex items-start space-x-4 p-4 sm:p-5 bg-neutral-800/60 rounded-xl border border-neutral-600/40 hover:border-purple-500/50 transition-all duration-300 backdrop-blur-sm shadow-lg"
+                      className="flex items-start space-x-4 rounded-xl border border-neutral-600/40 bg-neutral-800/60 p-4 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50 sm:p-5"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 + index * 0.1 }}
                     >
                       <motion.div
-                        className={`${info.color} text-xl sm:text-2xl mt-1`}
+                        className={`${info.color} mt-1 text-xl sm:text-2xl`}
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.2 }}
                       >
                         <IconComponent />
                       </motion.div>
                       <div>
-                        <h3 className="text-white font-semibold text-lg">
+                        <h3 className="text-lg font-semibold text-white">
                           {info.title}
                         </h3>
                         <div className="text-sm sm:text-base">{content}</div>
@@ -183,9 +183,9 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 }}
               >
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6">
+                <h3 className="mb-4 text-xl font-semibold text-white sm:mb-6 sm:text-2xl">
                   Connect With{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                     Me
                   </span>
                 </h3>
@@ -200,7 +200,7 @@ const Contact = () => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1, y: -3 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`w-12 h-12 sm:w-14 sm:h-14 bg-neutral-800/80 border border-neutral-600/50 rounded-xl flex items-center justify-center ${social.color} transition-all duration-300 hover:border-purple-500/50 backdrop-blur-sm shadow-lg hover:shadow-purple-500/20`}
+                        className={`flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-600/50 bg-neutral-800/80 sm:h-14 sm:w-14 ${social.color} shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50 hover:shadow-purple-500/20`}
                         aria-label={social.label}
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -220,7 +220,7 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -228,7 +228,7 @@ const Contact = () => {
                   >
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-neutral-300 mb-2"
+                      className="mb-2 block text-sm font-medium text-neutral-300"
                     >
                       Full Name *
                     </label>
@@ -239,7 +239,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-neutral-800/60 border border-neutral-600/50 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none text-white placeholder-neutral-400 transition-all duration-300 backdrop-blur-sm"
+                      className="w-full rounded-lg border border-neutral-600/50 bg-neutral-800/60 px-4 py-3 text-white placeholder-neutral-400 outline-none backdrop-blur-sm transition-all duration-300 focus:border-transparent focus:ring-2 focus:ring-purple-500"
                       placeholder="John Doe"
                     />
                   </motion.div>
@@ -250,7 +250,7 @@ const Contact = () => {
                   >
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-neutral-300 mb-2"
+                      className="mb-2 block text-sm font-medium text-neutral-300"
                     >
                       Email Address *
                     </label>
@@ -261,7 +261,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-neutral-800/60 border border-neutral-600/50 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none text-white placeholder-neutral-400 transition-all duration-300 backdrop-blur-sm"
+                      className="w-full rounded-lg border border-neutral-600/50 bg-neutral-800/60 px-4 py-3 text-white placeholder-neutral-400 outline-none backdrop-blur-sm transition-all duration-300 focus:border-transparent focus:ring-2 focus:ring-purple-500"
                       placeholder="john@example.com"
                     />
                   </motion.div>
@@ -274,7 +274,7 @@ const Contact = () => {
                 >
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-neutral-300 mb-2"
+                    className="mb-2 block text-sm font-medium text-neutral-300"
                   >
                     Subject *
                   </label>
@@ -285,7 +285,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-neutral-800/60 border border-neutral-600/50 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none text-white placeholder-neutral-400 transition-all duration-300 backdrop-blur-sm"
+                    className="w-full rounded-lg border border-neutral-600/50 bg-neutral-800/60 px-4 py-3 text-white placeholder-neutral-400 outline-none backdrop-blur-sm transition-all duration-300 focus:border-transparent focus:ring-2 focus:ring-purple-500"
                     placeholder="Project Collaboration"
                   />
                 </motion.div>
@@ -297,7 +297,7 @@ const Contact = () => {
                 >
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-neutral-300 mb-2"
+                    className="mb-2 block text-sm font-medium text-neutral-300"
                   >
                     Message *
                   </label>
@@ -308,7 +308,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-neutral-800/60 border border-neutral-600/50 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none text-white placeholder-neutral-400 transition-all duration-300 resize-none backdrop-blur-sm"
+                    className="w-full resize-none rounded-lg border border-neutral-600/50 bg-neutral-800/60 px-4 py-3 text-white placeholder-neutral-400 outline-none backdrop-blur-sm transition-all duration-300 focus:border-transparent focus:ring-2 focus:ring-purple-500"
                     placeholder="Tell me about your project or how we can work together..."
                   />
                 </motion.div>
@@ -318,10 +318,10 @@ const Contact = () => {
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`w-full rounded-lg px-6 py-3 font-semibold transition-all duration-300 ${
                     isSubmitting
-                      ? 'bg-neutral-700 text-neutral-400 cursor-not-allowed'
-                      : 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-purple-500/25'
+                      ? 'cursor-not-allowed bg-neutral-700 text-neutral-400'
+                      : 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:from-purple-700 hover:to-pink-700 hover:shadow-purple-500/25'
                   }`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -329,7 +329,7 @@ const Contact = () => {
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center space-x-2">
-                      <div className="w-4 h-4 border-2 border-neutral-400 border-t-transparent rounded-full animate-spin"></div>
+                      <div className="h-4 w-4 animate-spin rounded-full border-2 border-neutral-400 border-t-transparent"></div>
                       <span>Sending...</span>
                     </div>
                   ) : (
@@ -341,7 +341,7 @@ const Contact = () => {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="p-4 bg-green-900/60 border border-green-600/50 rounded-lg text-green-300 text-center backdrop-blur-sm"
+                    className="rounded-lg border border-green-600/50 bg-green-900/60 p-4 text-center text-green-300 backdrop-blur-sm"
                   >
                     Thank you! Your message has been sent successfully.
                   </motion.div>
