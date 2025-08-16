@@ -8,134 +8,11 @@ import {
 } from 'react-icons/fa';
 
 // Import project images
-import project1 from '../assets/projects/project-1.jpg';
-import project2 from '../assets/projects/project-2.jpg';
-import project3 from '../assets/projects/project-3.jpg';
-import project4 from '../assets/projects/project-4.jpg';
+
+import { detailedProjects } from '@/constants';
 
 const ProjectShowcase = () => {
   const [selectedProject, setSelectedProject] = useState(0);
-
-  const detailedProjects = [
-    {
-      id: 1,
-      title: 'Task Manager Pro',
-      subtitle: 'Advanced Todo Application',
-      description:
-        'A sophisticated task management application with priority levels, due dates, and advanced filtering. Features dark theme, local storage persistence, and intuitive user interface.',
-      longDescription:
-        'Built with React and modern hooks, this application showcases advanced state management using Context API. Features include drag-and-drop functionality, priority-based color coding, due date notifications, and comprehensive filtering options. The application uses Tailwind CSS for responsive design and Framer Motion for smooth animations.',
-      image: project1,
-      technologies: [
-        'React',
-        'Context API',
-        'Tailwind CSS',
-        'Local Storage',
-        'Framer Motion',
-      ],
-      features: [
-        'Priority-based task management',
-        'Due date tracking and notifications',
-        'Advanced filtering and sorting',
-        'Dark theme with modern UI',
-        'Local storage persistence',
-        'Responsive design',
-      ],
-      githubUrl: 'https://github.com/NikhiL-Developer03/Task-Manger',
-      liveUrl: '#',
-      status: 'Completed',
-      category: 'Web Application',
-    },
-    {
-      id: 2,
-      title: 'Personal Finance Tracker Plus',
-      subtitle: 'Smart Expense Management',
-      description:
-        'A comprehensive financial tracking application that helps users monitor expenses, set budgets, and analyze spending patterns with interactive charts and reports.',
-      longDescription:
-        'Full-stack application built with React frontend and Node.js backend. Features include expense categorization, budget planning, financial goal tracking, and detailed analytics. Uses Chart.js for data visualization and MongoDB for data persistence.',
-      image: project2,
-      technologies: [
-        'React',
-        'Node.js',
-        'Express',
-        'MongoDB',
-        'Chart.js',
-        'JWT',
-      ],
-      features: [
-        'Expense tracking and categorization',
-        'Budget planning and monitoring',
-        'Interactive financial charts',
-        'Goal setting and tracking',
-        'Monthly/yearly reports',
-        'Secure user authentication',
-      ],
-      githubUrl:
-        'https://github.com/NikhiL-Developer03/Personal-Finance-Tracker-Plus',
-      liveUrl: '#',
-      status: 'In Development',
-      category: 'Full-Stack Application',
-    },
-    {
-      id: 3,
-      title: 'Event Platform',
-      subtitle: 'Event Management System',
-      description:
-        'A comprehensive platform for creating, managing, and attending events. Features event registration, attendee management, and real-time updates.',
-      longDescription:
-        'Built with Next.js and TypeScript for type safety and performance. Integrates with external APIs for payment processing and email notifications. Features server-side rendering for optimal SEO and user experience.',
-      image: project3,
-      technologies: [
-        'Next.js',
-        'TypeScript',
-        'Prisma',
-        'PostgreSQL',
-        'Tailwind CSS',
-      ],
-      features: [
-        'Event creation and management',
-        'User registration system',
-        'Payment integration',
-        'Real-time notifications',
-        'Advanced search and filtering',
-        'Mobile-responsive design',
-      ],
-      githubUrl: 'https://github.com/NikhiL-Developer03/event_platform',
-      liveUrl: 'https://event-platform-gamma-hazel.vercel.app/',
-      status: 'Completed',
-      category: 'Full-Stack Application',
-    },
-    {
-      id: 4,
-      title: 'Genius School Website',
-      subtitle: 'Educational Institution Portal',
-      description:
-        'A modern educational website with responsive design, featuring school information, departments, faculty profiles, and administrative tools.',
-      longDescription:
-        'Server-side rendered application using Express.js and Handlebars. Features content management system for easy updates, contact forms, and dynamic routing for different school sections.',
-      image: project4,
-      technologies: [
-        'Node.js',
-        'Express',
-        'Handlebars',
-        'MongoDB',
-        'Bootstrap',
-      ],
-      features: [
-        'Responsive institutional design',
-        'Faculty and department pages',
-        'Contact and inquiry forms',
-        'Content management system',
-        'SEO optimized pages',
-        'Admin dashboard',
-      ],
-      githubUrl: 'https://github.com/NikhiL-Developer03/Genius',
-      liveUrl: '#',
-      status: 'Completed',
-      category: 'Web Application',
-    },
-  ];
 
   const nextProject = () => {
     setSelectedProject((prev) => (prev + 1) % detailedProjects.length);
@@ -243,16 +120,6 @@ const ProjectShowcase = () => {
                 {/* Floating Action Buttons */}
                 <div className="absolute bottom-3 left-3 right-3 z-30 flex justify-between opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <motion.a
-                    href={currentProject.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="rounded-full border border-neutral-600/50 bg-neutral-900/90 p-2.5 text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:border-purple-500/50"
-                  >
-                    <FaGithub className="text-sm" />
-                  </motion.a>
-                  <motion.a
                     href={currentProject.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -359,28 +226,19 @@ const ProjectShowcase = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2 }}
                 >
-                  <motion.a
-                    href={currentProject.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center justify-center space-x-2 rounded-lg border border-neutral-600/50 bg-neutral-800/80 px-4 py-2.5 text-sm text-white backdrop-blur-sm transition-all duration-300 hover:border-neutral-500/50 hover:bg-neutral-700/80 xs:px-5 xs:text-base"
-                  >
-                    <FaGithub />
-                    <span>View Code</span>
-                  </motion.a>
-                  <motion.a
-                    href={currentProject.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center justify-center space-x-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2.5 text-sm text-white shadow-lg shadow-purple-900/30 transition-all duration-300 hover:from-purple-700 hover:to-pink-700 xs:px-5 xs:text-base"
-                  >
-                    <FaExternalLinkAlt />
-                    <span>Live Demo</span>
-                  </motion.a>
+                  {currentProject.liveUrl != '' && (
+                    <motion.a
+                      href={currentProject.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center justify-center space-x-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2.5 text-sm text-white shadow-lg shadow-purple-900/30 transition-all duration-300 hover:from-purple-700 hover:to-pink-700 xs:px-5 xs:text-base"
+                    >
+                      <FaExternalLinkAlt />
+                      <span>Live Demo</span>
+                    </motion.a>
+                  )}
                 </motion.div>
               </div>
             </div>

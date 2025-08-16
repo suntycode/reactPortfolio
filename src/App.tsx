@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -92,10 +91,10 @@ const App = () => {
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <span className="text-sm font-bold text-white">N</span>
+                  <span className="text-sm font-bold text-white">@</span>
                 </motion.div>
                 <span className="text-xl font-bold text-white sm:text-2xl">
-                  Nikhil{' '}
+                  Rajat{' '}
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                     Developer
                   </span>
@@ -187,17 +186,17 @@ const App = () => {
                 <div className="flex justify-center space-x-3">
                   {[
                     {
-                      href: 'https://github.com/NikhiL-Developer03',
+                      href: 'https://github.com/suntycode',
                       icon: '🐱',
                       hoverColor: 'hover:bg-purple-600/50',
                     },
                     {
-                      href: 'https://www.linkedin.com/in/nikhil-web-developer/',
+                      href: 'https://www.linkedin.com/in/rajat-kumar-6995081b4',
                       icon: '💼',
                       hoverColor: 'hover:bg-blue-600/50',
                     },
                     {
-                      href: 'mailto:nikhil.developer03@gmail.com',
+                      href: 'mailto:rajatdev1299@gmail.com',
                       icon: '📧',
                       hoverColor: 'hover:bg-green-600/50',
                     },
@@ -230,7 +229,7 @@ const App = () => {
             >
               <div className="flex flex-col items-center justify-between space-y-3 sm:flex-row sm:space-y-0">
                 <p className="text-xs text-neutral-400 sm:text-sm">
-                  © 2025 Nikhil Developer. All rights reserved.
+                  © 2025 Rajat Developer. All rights reserved.
                 </p>
                 <div className="flex items-center space-x-4 text-xs text-neutral-500 sm:text-sm">
                   <span className="flex items-center space-x-1">

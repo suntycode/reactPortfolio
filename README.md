@@ -1,4 +1,4 @@
-# 🚀 Nikhil Developer - Portfolio
+# 🚀 Rajat Developer - Portfolio
 
 A modern, responsive portfolio website built with React, Vite, and Tailwind CSS, showcasing my skills, projects, and professional journey as a Full-Stack Developer.
 
@@ -76,7 +76,7 @@ Portfolio/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/NikhiL-Developer03/Portfolio.git
+   git clone https://github.com/Rajat-Developer03/Portfolio.git
    cd Portfolio
    ```
 
@@ -181,11 +181,11 @@ The portfolio is designed with a mobile-first approach and includes:
 
 ## 📧 Contact
 
-**Nikhil Developer**
+**Rajat Developer**
 
-- Email: nikhil.developer03@gmail.com
-- LinkedIn: [nikhil-web-developer](https://www.linkedin.com/in/nikhil-web-developer/)
-- GitHub: [NikhiL-Developer03](https://github.com/NikhiL-Developer03)
+- Email: Rajat.developer03@gmail.com
+- LinkedIn: [Rajat-web-developer](https://www.linkedin.com/in/Rajat-web-developer/)
+- GitHub: [Rajat-Developer03](https://github.com/Rajat-Developer03)
 - Location: Faridabad, Haryana, India
 
 ## 📄 License

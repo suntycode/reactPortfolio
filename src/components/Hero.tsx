@@ -1,18 +1,12 @@
 import { useState, useEffect } from 'react';
-import { HERO_CONTENT } from '../constants';
-import profilePic from '../assets/Nikhil.webp';
+import { HERO_CONTENT, roles } from '@constants/index';
 import { motion } from 'framer-motion';
-
 import { FaDownload, FaCode, FaRocket } from 'react-icons/fa';
+import { IMAGES } from '@/assets/images';
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
-  const roles = [
-    'Full Stack Developer',
-    'React Specialist',
-    'Cloud Engineer',
-    'Problem Solver',
-  ];
+
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -35,7 +29,7 @@ const Hero = () => {
     }
   }, [typedText, isDeleting, currentRoleIndex, roles]);
 
-  const container = (delay) => ({
+  const container = (delay: number) => ({
     hidden: { x: -100, opacity: 0 },
     visible: {
       x: 0,
@@ -44,7 +38,7 @@ const Hero = () => {
     },
   });
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -59,11 +53,11 @@ const Hero = () => {
             variants={container(0)}
             initial="hidden"
             animate="visible"
-            className="mb-4 text-3xl font-thin leading-tight tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:mb-8 lg:text-7xl xl:text-8xl"
+            className="mb-4 text-3xl font-medium leading-tight tracking-tight xs:text-4xl sm:text-5xl md:text-6xl lg:mb-8 lg:text-7xl xl:text-8xl"
           >
             <span className="text-white">Hi, I'm </span>
             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-              Nikhil
+              Rajat
             </span>
           </motion.h1>
 
@@ -118,7 +112,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               target="_blank"
-              href="https://drive.google.com/file/d/1oJaWeG6Uh4vwutbOA1p0k0f70y0QfaOD/view?usp=sharing"
+              href="https://drive.google.com/file/d/1bA0mp2naZGWF98vARn_qrj2frMWwPCLc/view?usp=sharing"
               download
               className="flex w-full items-center justify-center space-x-2 rounded-lg border border-neutral-600 bg-neutral-800 px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-neutral-700 sm:w-auto"
             >
@@ -141,7 +135,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <h3 className="text-lg font-bold text-white xs:text-xl sm:text-2xl">
-                1+
+                1.5+
               </h3>
               <p className="text-xs text-neutral-400 sm:text-sm">Years Exp.</p>
             </div>
@@ -168,8 +162,8 @@ const Hero = () => {
 
             <img
               className="relative h-40 w-40 rounded-full object-cover shadow-2xl ring-4 ring-purple-500/50 transition-transform duration-300 group-hover:scale-105 xs:h-48 xs:w-48 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 xl:h-96 xl:w-96"
-              src={profilePic}
-              alt="Nikhil Developer"
+              src={IMAGES.profilePic}
+              alt="Rajat Developer"
             />
 
             <motion.div

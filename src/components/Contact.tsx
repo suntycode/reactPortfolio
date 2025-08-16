@@ -8,6 +8,7 @@ import {
   FaGithub,
   FaTwitter,
 } from 'react-icons/fa';
+import { contactInfo, socialLinks } from '@/constants';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,16 +18,18 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
+  const [submitStatus, setSubmitStatus] = useState<null | string>(null);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -38,50 +41,6 @@ const Contact = () => {
       setTimeout(() => setSubmitStatus(null), 3000);
     }, 2000);
   };
-
-  const contactInfo = [
-    {
-      icon: FaMapMarkerAlt,
-      title: 'Location',
-      content: 'Sec-3, Ballabgarh, Faridabad, Haryana (121004)',
-      color: 'text-red-400',
-    },
-    {
-      icon: FaEnvelope,
-      title: 'Email',
-      content: 'nikhil.developer03@gmail.com',
-      link: 'mailto:nikhil.developer03@gmail.com',
-      color: 'text-blue-400',
-    },
-    {
-      icon: FaPhone,
-      title: 'Phone',
-      content: '+91 8375988026',
-      link: 'tel:+918375988026',
-      color: 'text-green-400',
-    },
-  ];
-
-  const socialLinks = [
-    {
-      icon: FaLinkedin,
-      url: 'https://www.linkedin.com/in/nikhil-web-developer/',
-      color: 'text-blue-600 hover:text-blue-500',
-      label: 'LinkedIn',
-    },
-    {
-      icon: FaGithub,
-      url: 'https://github.com/NikhiL-Developer03',
-      color: 'text-gray-400 hover:text-white',
-      label: 'GitHub',
-    },
-    {
-      icon: FaTwitter,
-      url: 'https://www.twitter.com',
-      color: 'text-blue-400 hover:text-blue-300',
-      label: 'Twitter',
-    },
-  ];
 
   return (
     <div className="pb-12 sm:pb-16 lg:pb-20">

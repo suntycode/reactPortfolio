@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
   RiReactjsLine,
@@ -18,6 +17,11 @@ import {
   SiVercel,
   SiFirebase,
   SiGithub,
+  SiAngular,
+  SiBootstrap,
+  SiRedux,
+  SiPostman,
+  SiMicrosoftexcel,
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -32,6 +36,15 @@ const Skills = () => {
           level: 90,
         },
         { name: 'Next.js', icon: SiNextdotjs, color: 'text-white', level: 85 },
+        { name: 'Angular', icon: SiAngular, color: 'text-red-600', level: 80 },
+        {
+          name: 'Bootstrap',
+          icon: SiBootstrap,
+          color: 'text-purple-500',
+          level: 75,
+        },
+        { name: 'Redux', icon: SiRedux, color: 'text-purple-400', level: 80 },
+
         {
           name: 'JavaScript',
           icon: RiJavascriptLine,
@@ -95,6 +108,18 @@ const Skills = () => {
         { name: 'Git', icon: SiGit, color: 'text-orange-500', level: 90 },
         { name: 'GitHub', icon: SiGithub, color: 'text-white', level: 88 },
         { name: 'Vercel', icon: SiVercel, color: 'text-white', level: 85 },
+        {
+          name: 'Postman',
+          icon: SiPostman,
+          color: 'text-orange-400',
+          level: 80,
+        },
+        {
+          name: 'Microsoft Excel',
+          icon: SiMicrosoftexcel,
+          color: 'text-green-600',
+          level: 60,
+        },
       ],
     },
   ];
@@ -223,20 +248,25 @@ const Skills = () => {
             </p>
 
             <div className="mt-4 flex flex-wrap justify-center gap-2 px-4 sm:mt-6 sm:gap-3">
-              {['AI/ML', 'DevOps', 'Microservices', 'GraphQL', 'Docker'].map(
-                (tech, index) => (
-                  <motion.span
-                    key={tech}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="rounded-full border border-purple-500/40 bg-gradient-to-r from-purple-600/30 to-pink-600/30 px-3 py-2 text-xs text-purple-300 backdrop-blur-sm transition-all duration-300 hover:border-purple-400/60 xs:px-4 sm:text-sm"
-                  >
-                    📚 {tech}
-                  </motion.span>
-                )
-              )}
+              {[
+                'AI/ML',
+                'DevOps',
+                'Microservices',
+                'GraphQL',
+                'Docker',
+                'Redis',
+              ].map((tech, index) => (
+                <motion.span
+                  key={tech}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="rounded-full border border-purple-500/40 bg-gradient-to-r from-purple-600/30 to-pink-600/30 px-3 py-2 text-xs text-purple-300 backdrop-blur-sm transition-all duration-300 hover:border-purple-400/60 xs:px-4 sm:text-sm"
+                >
+                  📚 {tech}
+                </motion.span>
+              ))}
             </div>
           </div>
         </motion.div>

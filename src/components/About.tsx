@@ -1,6 +1,5 @@
-import React from 'react';
-import aboutImg from '../assets/about.png';
-import { ABOUT_TEXT } from '../constants';
+import { IMAGES } from '@/assets/images';
+import { ABOUT_TEXT, highlights, stats } from '../constants';
 import { motion } from 'framer-motion';
 import {
   FaCode,
@@ -12,39 +11,6 @@ import {
 } from 'react-icons/fa';
 
 const About = () => {
-  const highlights = [
-    {
-      icon: FaCode,
-      title: 'Frontend',
-      description: 'React, Next.js, TypeScript',
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      icon: FaLaptopCode,
-      title: 'Backend',
-      description: 'Node.js, Express, MongoDB',
-      color: 'from-green-500 to-emerald-500',
-    },
-    {
-      icon: FaCloud,
-      title: 'Cloud',
-      description: 'Google Cloud, AWS, Docker',
-      color: 'from-purple-500 to-violet-500',
-    },
-    {
-      icon: FaTools,
-      title: 'Tools',
-      description: 'Git, VS Code, Figma',
-      color: 'from-orange-500 to-red-500',
-    },
-  ];
-
-  const stats = [
-    { number: '7+', label: 'Projects Completed' },
-    { number: '1+', label: 'Years Experience' },
-    { number: '7+', label: 'Happy Clients' },
-  ];
-
   return (
     <div className="border-b border-neutral-900 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
       <motion.div
@@ -74,8 +40,8 @@ const About = () => {
               <div className="relative">
                 <img
                   className="h-56 w-56 rounded-2xl border-2 border-neutral-700/50 object-cover shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:border-purple-500/50 xs:h-64 xs:w-64 sm:h-72 sm:w-72 lg:h-80 lg:w-80"
-                  src={aboutImg}
-                  alt="About Nikhil"
+                  src={IMAGES.aboutImg}
+                  alt="About"
                 />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-neutral-900/30 via-transparent to-transparent"></div>
 
@@ -120,10 +86,9 @@ const About = () => {
                   transition={{ duration: 0.6 }}
                   className="mb-3 text-2xl font-bold text-white xs:text-3xl sm:text-4xl"
                 >
-                  Passionate Developer &
+                  Building Scalable,
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                    {' '}
-                    Problem Solver
+                    User-Friendly Web Solutions
                   </span>
                 </motion.h2>
 
@@ -133,7 +98,16 @@ const About = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="mx-auto max-w-2xl text-base leading-relaxed text-neutral-300 sm:text-lg lg:mx-0"
                 >
-                  {ABOUT_TEXT}
+                  I’m a dedicated Full Stack Developer with a strong focus on
+                  building scalable, user-friendly web applications. Skilled in{' '}
+                  <strong>React</strong>, <strong>Next.js</strong>,{' '}
+                  <strong>AngularJS</strong>, <strong>Node.js</strong>,{' '}
+                  <strong>MySQL</strong>, <strong>MongoDB</strong>, and{' '}
+                  <strong>Postman</strong>, I combine technical expertise with
+                  problem-solving skills to deliver efficient solutions. I
+                  thrive in collaborative environments, enjoy tackling complex
+                  challenges, and continuously explore emerging technologies to
+                  craft high-quality, innovative products.
                 </motion.p>
               </div>
 
@@ -209,7 +183,7 @@ const About = () => {
             onClick={() =>
               document
                 .getElementById('contact')
-                .scrollIntoView({ behavior: 'smooth' })
+                ?.scrollIntoView({ behavior: 'smooth' })
             }
             className="group relative transform rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-pink-700 hover:shadow-purple-500/25"
           >

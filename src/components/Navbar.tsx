@@ -1,36 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaBars } from 'react-icons/fa';
-import logo from '../assets/Logo.png';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { IMAGES } from '@/assets/images';
+import { navItems, socialLinks } from '@/constants';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'timeline', label: 'Journey' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' },
-  ];
-
-  const socialLinks = [
-    {
-      icon: FaLinkedin,
-      url: 'https://www.linkedin.com/in/nikhil-web-developer/',
-      color: 'text-blue-600',
-    },
-    {
-      icon: FaGithub,
-      url: 'https://github.com/NikhiL-Developer03',
-      color: 'text-gray-400',
-    },
-    { icon: FaTwitter, url: 'https://www.twitter.com', color: 'text-blue-400' },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +33,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -83,11 +61,11 @@ const Navbar = () => {
             >
               <img
                 className="ring-gradient-to-r h-8 w-8 rounded-full ring-2 ring-purple-500/70 transition-all duration-300 hover:ring-purple-400/90 xs:h-10 xs:w-10 lg:h-12 lg:w-12"
-                src={logo}
-                alt="Nikhil Developer"
+                src={IMAGES.logo}
+                alt="Rajat Developer"
               />
               <span className="hidden bg-gradient-to-r from-white to-purple-200 bg-clip-text text-base font-bold text-transparent xs:block xs:text-lg lg:text-xl">
-                Nikhil Developer
+                Rajat Developer
               </span>
             </motion.div>
 

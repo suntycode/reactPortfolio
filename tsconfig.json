@@ -19,20 +19,30 @@
     "allowSyntheticDefaultImports": true,
 
     // Migration helpers
-    "allowJs": true, // <-- keeps .js/.jsx working during migration
-    "checkJs": false, // <-- avoids flagging JS errors early
+    "allowJs": true,
+    "checkJs": false,
     "isolatedModules": true,
     "skipLibCheck": true,
 
     // Type checking
     "strict": true,
-    "noUncheckedIndexedAccess": false, // <-- disable for migration; re-enable later
-    "exactOptionalPropertyTypes": false, // <-- disable for migration; re-enable later
+    "noUncheckedIndexedAccess": false,
+    "exactOptionalPropertyTypes": false,
 
     // Output controls
     "sourceMap": true,
-    "declaration": false, // you can enable later if building a library
-    "declarationMap": false
+    "declaration": false,
+    "declarationMap": false,
+
+    // ✅ Path Aliases
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
+      "@utils/*": ["src/utils/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"]
