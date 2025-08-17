@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# reactPortfolio
-portfolio
-=======
 # 🚀 Rajat Developer - Portfolio
 
 A modern, responsive portfolio website built with React, Vite, and Tailwind CSS, showcasing my skills, projects, and professional journey as a Full-Stack Developer.
@@ -206,4 +202,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 ⭐ **If you found this portfolio helpful, please give it a star!** ⭐
->>>>>>> develop
