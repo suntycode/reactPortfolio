@@ -22,6 +22,7 @@ import {
   SiRedux,
   SiPostman,
   SiMicrosoftexcel,
+  SiRazorpay,
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -99,6 +100,12 @@ const Skills = () => {
           icon: SiFirebase,
           color: 'text-yellow-500',
           level: 70,
+        },
+        {
+          name: 'Razorpay',
+          icon: SiRazorpay,
+          color: 'text-blue-500',
+          level: 50,
         },
       ],
     },

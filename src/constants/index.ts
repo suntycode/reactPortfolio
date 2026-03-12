@@ -253,6 +253,53 @@ export const certifications = [
 export const detailedProjects = [
   {
     id: 1,
+    title: 'LiteLearn',
+    subtitle: 'White-Label SaaS Platform for Course Creators',
+
+    description:
+      'A SaaS platform that enables educators and creators to build, sell, and manage their own online learning platforms with secure video streaming and integrated payments.',
+
+    longDescription:
+      'LiteLearn is a scalable EdTech SaaS platform designed for creators who want to launch and monetize their own online learning platforms. Creators can upload courses, manage lectures, and sell content directly to students. The platform includes Razorpay payment integration, dynamic order management, secure video streaming using HLS (m3u8) format, and automated messaging for user engagement. It also provides KYC verification, bank account setup for payouts, subscription-based monetization, customizable themes, and custom domain support. Built with a modern full-stack architecture using React, Node.js, and MongoDB, LiteLearn focuses on security, scalability, and creator independence.',
+
+    image: IMAGES.lmsPlatform,
+
+    technologies: [
+      'React.js',
+      'TypeScript',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Zustand',
+      'Tailwind CSS',
+      'AWS S3',
+      'HLS (m3u8)',
+      'Razorpay',
+    ],
+
+    features: [
+      'Creator dashboard for course and student management',
+      'Razorpay payment gateway integration',
+      'Dynamic payment and order management system',
+      'Secure video streaming using HLS (m3u8) format',
+      'AWS S3 storage for scalable media delivery',
+      'Automated DM / notification system for user engagement',
+      'Auto messages for enrollment, course updates, and certificates',
+      'Instructor KYC verification system',
+      'Bank account verification for payouts',
+      'Subscription-based monetization model',
+      'Custom domain support for creators',
+      'Theme management for white-label learning platforms',
+      'Course enrollment and purchase management',
+      'Scalable REST API architecture',
+    ],
+
+    liveUrl: 'https://litlearn.in/',
+    status: 'In Progress',
+    category: 'EdTech SaaS Platform',
+  },
+  {
+    id: 2,
     title: 'CollectaGift',
     subtitle: 'Collaborative Gift Contribution Platform',
     description:
@@ -275,7 +322,30 @@ export const detailedProjects = [
     category: 'Web Application',
   },
   {
-    id: 2,
+    id: 3,
+    title: 'E-commerce Automobile Platform',
+    subtitle: 'Online Automobile Marketplace',
+    description:
+      'A dynamic e-commerce platform for automobiles with advanced features like product viewing, rating, purchasing, and guest access.',
+    longDescription:
+      'Developed a scalable e-commerce platform using React.js, Tailwind CSS, and Redux. Built reusable components for maintainability, integrated secure payment gateway and shipping API, and designed an admin panel to manage site operations and user data. Followed best practices and design patterns to ensure clean workflows and robust performance.',
+    image: IMAGES.taskManager, // replace with automobile project image
+    technologies: ['React.js', 'Redux', 'Tailwind CSS', 'Node.js', 'MongoDB'],
+    features: [
+      'Product viewing, rating, and purchasing',
+      'Guest user functionality',
+      'Secure payment gateway integration',
+      'Shipping API integration',
+      'Admin panel for site and user management',
+      'Reusable and scalable components',
+    ],
+
+    liveUrl: 'https://www.jccautomobile.com/',
+    status: 'Completed',
+    category: 'E-commerce',
+  },
+  {
+    id: 4,
     title: 'Admin Panel for Mobile App User Management',
     subtitle: 'User & Seller Management Dashboard',
     description:
@@ -296,52 +366,6 @@ export const detailedProjects = [
     liveUrl: 'https://adminatra.deploywork.com/seller/sign-in',
     status: 'Completed',
     category: 'Admin Panel',
-  },
-  {
-    id: 3,
-    title: 'E-commerce SaaS for Beauty & Makeover',
-    subtitle: 'Appointment Booking Platform',
-    description:
-      'A SaaS-based platform for booking beauty and makeover appointments with admin management features.',
-    longDescription:
-      'Developed a modern e-commerce SaaS application using Next.js, Node.js, and Tailwind CSS. The platform allows users to book beauty and makeover appointments, while the admin panel (built in React.js) provides full control over appointments, services, and user data. Backend powered by Node.js and MongoDB ensures scalability and reliability.',
-    image: IMAGES.eventPlatform, // replace with beauty project image
-    technologies: ['Next.js', 'React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    features: [
-      'Appointment booking system',
-      'Service and user management',
-      'Admin panel for full control',
-      'Responsive and modern UI',
-      'Scalable backend with Node.js & MongoDB',
-      'SaaS-ready architecture',
-    ],
-
-    liveUrl: '',
-    status: 'In Progress',
-    category: 'SaaS Application',
-  },
-  {
-    id: 4,
-    title: 'E-commerce Automobile Platform',
-    subtitle: 'Online Automobile Marketplace',
-    description:
-      'A dynamic e-commerce platform for automobiles with advanced features like product viewing, rating, purchasing, and guest access.',
-    longDescription:
-      'Developed a scalable e-commerce platform using React.js, Tailwind CSS, and Redux. Built reusable components for maintainability, integrated secure payment gateway and shipping API, and designed an admin panel to manage site operations and user data. Followed best practices and design patterns to ensure clean workflows and robust performance.',
-    image: IMAGES.taskManager, // replace with automobile project image
-    technologies: ['React.js', 'Redux', 'Tailwind CSS', 'Node.js', 'MongoDB'],
-    features: [
-      'Product viewing, rating, and purchasing',
-      'Guest user functionality',
-      'Secure payment gateway integration',
-      'Shipping API integration',
-      'Admin panel for site and user management',
-      'Reusable and scalable components',
-    ],
-
-    liveUrl: '',
-    status: 'Completed',
-    category: 'E-commerce',
   },
 ];
 

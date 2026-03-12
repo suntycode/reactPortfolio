@@ -96,7 +96,7 @@ const ProjectShowcase = () => {
                   <img
                     src={currentProject.image}
                     alt={currentProject.title}
-                    className="h-52 w-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 xs:h-60 sm:h-72 lg:h-80 xl:h-96"
+                    className="h-52 w-full object-contain transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 xs:h-60 sm:h-72 lg:h-80 xl:h-96"
                   />
                   <div className="absolute inset-0 z-20 bg-gradient-to-br from-purple-500/20 via-transparent to-pink-500/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 </div>

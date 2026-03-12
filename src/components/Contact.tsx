@@ -64,7 +64,7 @@ const Contact = () => {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-neutral-700/50 bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 p-6 shadow-2xl shadow-purple-900/10 backdrop-blur-xl sm:p-8 lg:p-10">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="grid grid-cols-1 gap-8 lg:gap-12">
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -50 }}
@@ -173,7 +173,7 @@ const Contact = () => {
               </motion.div>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -306,7 +306,7 @@ const Contact = () => {
                   </motion.div>
                 )}
               </form>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>
