@@ -112,7 +112,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               target="_blank"
-              href="https://drive.google.com/file/d/1QCLeZ6FfxEWeN5g3hhoOGZJVg5DSj3Hz/view?usp=sharing"
+              href="https://drive.google.com/file/d/1SM0qjpY5A_zRzJoBumGDAOXYlRhNO-ai/view?usp=sharing"
               download
               className="flex w-full items-center justify-center space-x-2 rounded-lg border border-neutral-600 bg-neutral-800 px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-neutral-700 sm:w-auto"
             >
