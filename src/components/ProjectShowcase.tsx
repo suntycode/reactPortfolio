@@ -88,7 +88,7 @@ const ProjectShowcase = () => {
             transition={{ duration: 0.5 }}
             className="rounded-2xl border border-neutral-700/50 bg-gradient-to-br from-neutral-900/50 via-neutral-800/30 to-purple-900/20 p-4 shadow-2xl shadow-purple-900/10 backdrop-blur-xl sm:p-6 lg:p-8"
           >
-            <div className="grid grid-cols-1 items-center gap-4 sm:gap-6 lg:grid-cols-2 lg:gap-8">
+            <div className="grid grid-cols-1 items-center gap-4 sm:gap-6  lg:gap-8">
               {/* Enhanced Image Section */}
               <div className="group relative order-2 lg:order-1">
                 <div className="relative overflow-hidden rounded-xl border border-neutral-600/40 shadow-2xl">
@@ -96,7 +96,7 @@ const ProjectShowcase = () => {
                   <img
                     src={currentProject.image}
                     alt={currentProject.title}
-                    className="h-52 w-full object-contain transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 xs:h-60 sm:h-72 lg:h-80 xl:h-96"
+                    className="h-52 w-full object-fill transition-all duration-500 group-hover:scale-110 group-hover:brightness-110 xs:h-60 sm:h-72 lg:h-80 xl:h-96"
                   />
                   <div className="absolute inset-0 z-20 bg-gradient-to-br from-purple-500/20 via-transparent to-pink-500/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 </div>
